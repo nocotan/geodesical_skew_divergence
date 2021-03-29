@@ -1,6 +1,5 @@
 from typing import Optional
 import torch
-import torch.nn.functional as F
 
 from gs_divergence.alpha_geodesic import alpha_geodesic
 
