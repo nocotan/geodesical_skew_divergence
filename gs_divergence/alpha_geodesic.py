@@ -1,8 +1,15 @@
 import torch
 
 
-def alpha_geodesic(a: torch.Tensor, b: torch.Tensor,
-                          alpha: float, lmd: float):
+def alpha_geodesic(
+    a: torch.Tensor,
+    b: torch.Tensor,
+    alpha: float,
+    lmd: float
+) -> torch.Tensor:
+    r"""
+    $\alpha$-geodesic between two probability distributions
+    """
     if alpha == 1:
         return torch.exp((1 - lmd) * torch.log(a) + lmd * torch.log(b))
     else:
