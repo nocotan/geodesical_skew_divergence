@@ -39,7 +39,7 @@ div = gs_div(a, b, alpha=-1, lmd=0.5)
 ![](./assets/def_gs_divergence.png)
 
 
-## Visualizations of the α-geodesical skew divergence
+## Visualizations of the α-Geodesical Skew Divergence
 
 ![](./assets/gs_divergence.png)
 
