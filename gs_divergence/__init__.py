@@ -1,0 +1,1 @@
+from gs_divergence.geodesical_skew_divergence import gs_div
