@@ -2,7 +2,7 @@ from typing import Optional
 import torch
 import torch.nn.functional as F
 
-from gs_divergence.quasi_arithmetic_mean import quasi_arithmetic_mean
+from gs_divergence.alpha_geodesic import alpha_geodesic
 
 
 def gs_div(
@@ -30,7 +30,7 @@ def gs_div(
 
     assert lmd >= 0 and lmd <= 1
 
-    skew_target = quasi_arithmetic_mean(input, target, alpha=alpha, lmd=lmd)
+    skew_target = alpha_geodesic(input, target, alpha=alpha, lmd=lmd)
     div = input * torch.log(input / skew_target)
     if reduction == 'batchmean':
         div = div.sum() / input.size()[0]
