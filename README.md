@@ -1,4 +1,4 @@
-# geodesical_skew_divergence
+# alpha-Geodesical Skew Divergence
 
 ![](./assets/gs_divergence.png)
 
