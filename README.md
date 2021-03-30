@@ -39,8 +39,13 @@ div = gs_div(a, b, alpha=-1, lmd=0.5)
 ![](./assets/def_gs_divergence.png)
 
 
+
 ## Visualizations of the α-Geodesical Skew Divergence
 
+### Monotonicity of the α-geodesical skew divergence with respect to α
+
 ![](./assets/gs_divergence.png)
+
+### Continuity of the α-geodesical skew divergence with respect to α and λ.
 
 ![](./assets/gs_divergence_surface.png)
