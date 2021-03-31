@@ -11,3 +11,11 @@ class TestAlphaGeodesic(unittest.TestCase):
         g = alpha_geodesic(a, b, alpha=-1, lmd=0.5)
 
         self.assertTrue(torch.equal(g, ((a+b) / 2)))
+
+    def test_alpha_1(self):
+        a = torch.Tensor([1, 2, 3])
+        b = torch.Tensor([4, 5, 6])
+        g = alpha_geodesic(a, b, alpha=1, lmd=0.5)
+        res = torch.exp(0.5 * torch.log(a) + 0.5 * torch.log(b))
+
+        self.assertTrue(torch.equal(g, res))
