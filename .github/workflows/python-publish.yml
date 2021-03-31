@@ -1,0 +1,12 @@
+name: Test
+on: [push]
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Prepare repo
+        uses: actions/checkout@master
+      - name: Install dependencies
+        run: python setup.py install
+      - name: Test
+        run: python -m unittest discover
