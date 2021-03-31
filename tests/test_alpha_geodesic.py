@@ -27,3 +27,11 @@ class TestAlphaGeodesic(unittest.TestCase):
         res = (0.5 * torch.sqrt(a) + 0.5 * torch.sqrt(b))**2
 
         self.assertTrue(torch.equal(g, res))
+
+    def test_alpha_3(self):
+        a = torch.Tensor([1, 2, 3])
+        b = torch.Tensor([4, 5, 6])
+        g = alpha_geodesic(a, b, alpha=3, lmd=0.5)
+        res = 1 / (0.5 * 1/a + 0.5 * 1/b)
+
+        self.assertTrue(torch.equal(g, res))
