@@ -35,3 +35,19 @@ class TestAlphaGeodesic(unittest.TestCase):
         res = 1 / (0.5 * 1/a + 0.5 * 1/b)
 
         self.assertTrue(torch.equal(g, res))
+
+    def test_alpha_inf(self):
+        a = torch.Tensor([1, 2, 3])
+        b = torch.Tensor([4, 5, 6])
+        g = alpha_geodesic(a, b, alpha=float('inf'), lmd=0.5)
+        res = torch.min(a, b)
+
+        self.assertTrue(torch.equal(g, res))
+
+    def test_alpha_minus_inf(self):
+        a = torch.Tensor([1, 2, 3])
+        b = torch.Tensor([4, 5, 6])
+        g = alpha_geodesic(a, b, alpha=-float('inf'), lmd=0.5)
+        res = torch.max(a, b)
+
+        self.assertTrue(torch.equal(g, res))
