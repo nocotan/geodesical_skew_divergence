@@ -6,7 +6,7 @@
 [![PyPI](https://img.shields.io/pypi/v/gs-divergence)](https://pypi.org/project/gs-divergence/)
 [![arXiv](http://img.shields.io/badge/math.IT-arXiv%3A2103.17060-B31B1B.svg)](https://arxiv.org/abs/2103.17060)
 
-Official PyTorch Implementation of "α-Geodesical Skew Divergence".
+Official PyTorch Implementation of "[α-Geodesical Skew Divergence](https://arxiv.org/abs/2103.17060)".
 
 [[arXiv](https://arxiv.org/abs/2103.17060)]
 
