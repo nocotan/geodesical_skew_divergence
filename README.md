@@ -2,8 +2,11 @@
 
 [![GitHub license](https://img.shields.io/github/license/nocotan/geodesical_skew_divergence)](https://github.com/nocotan/geodesical_skew_divergence/blob/main/LICENSE)
 ![GitHub repo size](https://img.shields.io/github/repo-size/nocotan/geodesical_skew_divergence)
+![GitHub Workflow Status](https://img.shields.io/github/workflow/status/nocotan/geodesical_skew_divergence/Run%20Python%20Tests)
 
 Official PyTorch Implementation of "α-Geodesical Skew Divergence".
+
+[[arXiv](https://arxiv.org/abs/2103.17060)]
 
 > The asymmetric skew divergence smooths one of the distributions by mixing it, to a degree determined by the parameter λ, with the other distribution. Such divergence is an approximation of the KL divergence that does not require the target distribution to be absolutely continuous with respect to the source distribution. In this paper, an information geometric generalization of  the skew divergence called the  α-geodesical skew divergence is proposed, and its properties are studied.
 
