@@ -1,6 +1,7 @@
 # α-Geodesical Skew Divergence
 
 [![GitHub license](https://img.shields.io/github/license/nocotan/geodesical_skew_divergence)](https://github.com/nocotan/geodesical_skew_divergence/blob/main/LICENSE)
+![GitHub repo size](https://img.shields.io/github/repo-size/nocotan/geodesical_skew_divergence)
 
 Official PyTorch Implementation of "α-Geodesical Skew Divergence".
 
