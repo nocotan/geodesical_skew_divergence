@@ -65,3 +65,16 @@ div = gs_div(a, b, alpha=-1, lmd=0.5)
 ### Continuity of the α-geodesical skew divergence with respect to α and λ.
 
 ![](./assets/gs_divergence_surface.png)
+
+## Citation
+
+```bibtex
+@misc{kimura2021geodesical,
+    title={$α$-Geodesical Skew Divergence},
+    author={Masanari Kimura and Hideitsu Hino},
+    year={2021},
+    eprint={2103.17060},
+    archivePrefix={arXiv},
+    primaryClass={cs.IT}
+}
+```
