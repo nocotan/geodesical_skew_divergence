@@ -10,6 +10,9 @@ def alpha_geodesic(
     r"""
     $\alpha$-geodesic between two probability distributions
     """
+
+    a += 1e-12
+    b += 1e-12
     if alpha == 1:
         return torch.exp((1 - lmd) * torch.log(a) + lmd * torch.log(b))
     elif alpha >= 1e+9:
@@ -20,8 +23,6 @@ def alpha_geodesic(
         p = (1 - alpha) / 2
         a = a ** p
         b = b ** p
-        a[a == float('inf')] = 0
-        b[b == float('inf')] = 0
         g = ((1 - lmd) * a + lmd * b) ** (1/p)
 
         return g
