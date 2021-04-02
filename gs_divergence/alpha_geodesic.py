@@ -18,4 +18,7 @@ def alpha_geodesic(
         return torch.max(a, b)
     else:
         p = (1 - alpha) / 2
-        return ((1 - lmd) * (a ** p) + lmd * (b ** p)) ** (1/p)
+        g = ((1 - lmd) * (a ** p) + lmd * (b ** p)) ** (1/p)
+        g[g == float('inf')] = 0
+
+        return g
