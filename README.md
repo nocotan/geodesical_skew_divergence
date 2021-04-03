@@ -17,13 +17,17 @@ Official PyTorch Implementation of "[α-Geodesical Skew Divergence](https://arxi
 
 ## Installation
 
-### From PyPi
+### From PyPI
+
+Install gs_divergence from PyPI via
 
 ```bash
 $ pip install gs_divergence
 ```
 
 ### From GitHub
+
+Alternatively, you can install the latest version directly from the GitHub repository with the following command.
 
 ```bash
 $ git clone https://github.com/nocotan/geodesical_skew_divergence
