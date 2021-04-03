@@ -26,6 +26,6 @@ def alpha_geodesic(
         g = ((1 - lmd) * lhs + lmd * rhs) ** (1/p)
 
         if alpha > 0 and (g == 0).sum() > 0:
-            return torch.max(a, b)
+            return torch.min(a, b)
 
         return g
