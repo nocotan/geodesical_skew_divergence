@@ -72,6 +72,7 @@ class TestAlphaGeodesic(unittest.TestCase):
         b = torch.Tensor([[0.4, 0.4, 0.2], [0.2, 0.1, 0.7]])
 
         g = alpha_geodesic(a, b, alpha=100, lmd=0.5)
+        print(g)
         res = torch.min(a, b)
 
         self.assertTrue(torch.all(torch.isclose(g, res)))

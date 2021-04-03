@@ -30,7 +30,7 @@ def gs_div(
     assert lmd >= 0 and lmd <= 1
 
     skew_target = alpha_geodesic(input, target, alpha=alpha, lmd=lmd)
-    div = input * torch.log(input / skew_target)
+    div = input * torch.log(input / skew_target + 1e-12)
     if reduction == 'batchmean':
         div = div.sum() / input.size()[0]
     elif reduction == 'sum':
