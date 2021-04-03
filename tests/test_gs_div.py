@@ -20,7 +20,7 @@ class TestGSDiv(unittest.TestCase):
 
         self.assertTrue(torch.isinf(g).sum() == 0)
 
-    def test_continuity(self):
+    def test_monotonicity(self):
         a = torch.Tensor([[0.1, 0.2, 0.7], [0.5, 0.5, 0.0]])
         b = torch.Tensor([[0.4, 0.4, 0.2], [0.2, 0.1, 0.7]])
 
