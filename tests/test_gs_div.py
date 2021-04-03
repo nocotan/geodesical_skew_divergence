@@ -45,3 +45,15 @@ class TestGSDiv(unittest.TestCase):
         g_1 = gs_div(a, b, alpha=0, lmd=1-lmd)
 
         self.assertTrue(~torch.equal(g_0, g_1))
+
+    def test_subadditivity(self):
+        alpha = 0
+        beta = 1
+        a = torch.Tensor([[0.1, 0.2, 0.7], [0.5, 0.5, 0.0]])
+        b = torch.Tensor([[0.4, 0.4, 0.2], [0.2, 0.1, 0.7]])
+
+        g_0 = gs_div(a, b, alpha=alpha, lmd=0.5)
+        g_1 = gs_div(a, b, alpha=beta, lmd=0.5)
+        g_2 = gs_div(a, b, alpha=alpha+beta, lmd=0.5)
+
+        self.assertTrue(g_2 <= g_0 + g_1)
