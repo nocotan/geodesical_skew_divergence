@@ -2,10 +2,12 @@
 
 [![GitHub license](https://img.shields.io/github/license/nocotan/geodesical_skew_divergence)](https://github.com/nocotan/geodesical_skew_divergence/blob/main/LICENSE)
 ![GitHub repo size](https://img.shields.io/github/repo-size/nocotan/geodesical_skew_divergence)
-![GitHub Workflow Status](https://img.shields.io/github/workflow/status/nocotan/geodesical_skew_divergence/Run%20Python%20Tests)
 [![PyPI](https://img.shields.io/pypi/v/gs-divergence)](https://pypi.org/project/gs-divergence/)
 [![arXiv](http://img.shields.io/badge/math.IT-arXiv%3A2103.17060-B31B1B.svg)](https://arxiv.org/abs/2103.17060)
 ![GitHub Repo stars](https://img.shields.io/github/stars/nocotan/geodesical_skew_divergence?style=social)
+
+![GitHub Workflow Status](https://img.shields.io/github/workflow/status/nocotan/geodesical_skew_divergence/Run%20Python%20Tests)
+![GitHub issues](https://img.shields.io/github/issues/nocotan/geodesical_skew_divergence)
 
 Official PyTorch Implementation of "[α-Geodesical Skew Divergence](https://arxiv.org/abs/2103.17060)".
 
