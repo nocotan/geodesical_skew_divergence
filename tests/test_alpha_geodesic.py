@@ -66,3 +66,12 @@ class TestAlphaGeodesic(unittest.TestCase):
         g = alpha_geodesic(a, b, alpha=1, lmd=0.5)
 
         self.assertTrue(torch.isinf(g).sum() == 0)
+
+    def test_value_inf(self):
+        a = torch.Tensor([[0.1, 0.2, 0.7], [0.5, 0.5, 0.0]])
+        b = torch.Tensor([[0.4, 0.4, 0.2], [0.2, 0.1, 0.7]])
+
+        g = alpha_geodesic(a, b, alpha=100, lmd=0.5)
+        res = torch.max(a, b)
+
+        self.assertTrue(torch.equal(g, res))
