@@ -74,7 +74,7 @@ class TestAlphaGeodesic(unittest.TestCase):
         g = alpha_geodesic(a, b, alpha=100, lmd=0.5)
         res = torch.min(a, b)
 
-        self.assertTrue(torch.equal(g, res))
+        self.assertTrue(torch.all(torch.isclose(g, res)))
 
     def test_grad(self):
         a = torch.tensor([[0.1, 0.2, 0.7], [0.5, 0.5, 0.0]], requires_grad=True)
