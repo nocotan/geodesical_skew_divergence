@@ -30,6 +30,8 @@ $ python setup.py install
 
 ## Usage
 
+### Compute divergence from two Tensors
+
 ```python
 import torch
 from gs_divergence import gs_div
@@ -38,6 +40,19 @@ a = torch.Tensor([0.1, 0.2, 0.3, 0.4])
 b = torch.Tensor([0.2, 0.2, 0.4, 0.2])
 
 div = gs_div(a, b, alpha=-1, lmd=0.5)
+```
+
+### Compute gradients
+
+```python
+import torch
+from gs_divergence import gs_div
+
+a = torch.tensor([0.1, 0.2, 0.3, 0.4], requires_grad=True)
+b = torch.tensor([0.2, 0.2, 0.4, 0.2])
+
+div = gs_div(a, b, alpha=-1, lmd=0.5)
+dif.backward()
 ```
 
 | parameter | description                                                                                                                                                                                                                                                                                                                                                                                                                              |
