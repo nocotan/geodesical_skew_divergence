@@ -19,3 +19,12 @@ class TestGSDiv(unittest.TestCase):
         g = gs_div(a, b, alpha=1, lmd=0.5)
 
         self.assertTrue(torch.isinf(g).sum() == 0)
+
+    def test_continuity(self):
+        a = torch.Tensor([[0.1, 0.2, 0.7], [0.5, 0.5, 0.0]])
+        b = torch.Tensor([[0.4, 0.4, 0.2], [0.2, 0.1, 0.7]])
+
+        g_0 = gs_div(a, b, alpha=0, lmd=0.5)
+        g_1 = gs_div(a, b, alpha=1, lmd=0.5)
+
+        self.assertTrue(g_1 > g_0)
