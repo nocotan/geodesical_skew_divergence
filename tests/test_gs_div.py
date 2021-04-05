@@ -57,3 +57,15 @@ class TestGSDiv(unittest.TestCase):
         g_2 = gs_div(a, b, alpha=alpha+beta, lmd=0.5)
 
         self.assertTrue(g_2 <= g_0 + g_1)
+
+    def test_upper_bound(self):
+        alpha_upper = float('inf')
+        alpha_list = [-1, 0, 1, 2, 3, 4]
+
+        a = torch.Tensor([[0.1, 0.2, 0.7], [0.5, 0.5, 0.0]])
+        b = torch.Tensor([[0.4, 0.4, 0.2], [0.2, 0.1, 0.7]])
+
+        g_upper = gs_div(a, b, alpha=alpha_upper, lmd=0.5)
+        for alpha in alpha_list:
+            g = gs_div(a, b, alpha=alpha, lmd=0.5)
+            self.assertTrue(g <= g_upper)
