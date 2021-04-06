@@ -10,7 +10,10 @@ class TestGSDiv(unittest.TestCase):
         b = torch.Tensor([4, 5, 6])
         g = gs_div(a, b, alpha=-1, lmd=0.5)
 
+        res = (a * torch.log(a / (0.5*a + 0.5*b))).sum()
+
         self.assertIsNotNone(g)
+        self.assertEqual(g, res)
 
     def test_value_0_2d(self):
         a = torch.Tensor([[0.1, 0.2, 0.7], [0.5, 0.5, 0.0]])
