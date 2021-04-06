@@ -92,6 +92,7 @@ dif.backward()
 
 ```bibtex
 @misc{kimura2021geodesical,
+    doi={10.20944/preprints202104.0055.v1}
     title={$α$-Geodesical Skew Divergence},
     author={Masanari Kimura and Hideitsu Hino},
     year={2021},
