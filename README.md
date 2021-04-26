@@ -11,7 +11,7 @@
 ![GitHub issues](https://img.shields.io/github/issues/nocotan/geodesical_skew_divergence)
 
 
-Official PyTorch Implementation of "[α-Geodesical Skew Divergence](https://arxiv.org/abs/2103.17060)".
+Official PyTorch Implementation of "[α-Geodesical Skew Divergence](https://www.mdpi.com/1099-4300/23/5/528)".
 
 - [[Entropy](https://www.mdpi.com/1099-4300/23/5/528)]
 - [[arXiv](https://arxiv.org/abs/2103.17060)]
