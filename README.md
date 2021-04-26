@@ -13,7 +13,8 @@
 
 Official PyTorch Implementation of "[α-Geodesical Skew Divergence](https://arxiv.org/abs/2103.17060)".
 
-[[arXiv](https://arxiv.org/abs/2103.17060)]
+- [[Entropy](https://www.mdpi.com/1099-4300/23/5/528)]
+- [[arXiv](https://arxiv.org/abs/2103.17060)]
 
 > The asymmetric skew divergence smooths one of the distributions by mixing it, to a degree determined by the parameter λ, with the other distribution. Such divergence is an approximation of the KL divergence that does not require the target distribution to be absolutely continuous with respect to the source distribution. In this paper, an information geometric generalization of  the skew divergence called the  α-geodesical skew divergence is proposed, and its properties are studied.
 
@@ -93,13 +94,17 @@ dif.backward()
 ## Citation
 
 ```bibtex
-@misc{kimura2021geodesical,
-    doi={10.20944/preprints202104.0055.v1}
-    title={$α$-Geodesical Skew Divergence},
-    author={Masanari Kimura and Hideitsu Hino},
-    year={2021},
-    eprint={2103.17060},
-    archivePrefix={arXiv},
-    primaryClass={cs.IT}
+@Article{e23050528,
+AUTHOR = {Kimura, Masanari and Hino, Hideitsu},
+TITLE = {α-Geodesical Skew Divergence},
+JOURNAL = {Entropy},
+VOLUME = {23},
+YEAR = {2021},
+NUMBER = {5},
+ARTICLE-NUMBER = {528},
+URL = {https://www.mdpi.com/1099-4300/23/5/528},
+ISSN = {1099-4300},
+ABSTRACT = {The asymmetric skew divergence smooths one of the distributions by mixing it, to a degree determined by the parameter λ, with the other distribution. Such divergence is an approximation of the KL divergence that does not require the target distribution to be absolutely continuous with respect to the source distribution. In this paper, an information geometric generalization of the skew divergence called the α-geodesical skew divergence is proposed, and its properties are studied.},
+DOI = {10.3390/e23050528}
 }
 ```
