@@ -1,7 +1,22 @@
 from typing import Optional
 import torch
+import torch.nn as nn
 
 from gs_divergence.alpha_geodesic import alpha_geodesic
+
+
+class GSDivLoss(nn.Module):
+    def __init__(
+        self,
+        alpha: float = -1,
+        lmd: float = 0.5,
+        reduction: Optional[str] = 'sum'):
+        r"""
+        """
+
+        self.alpha = alpha
+        self.lmd = lmd
+        self.reduction = reduction
 
 
 def gs_div(
