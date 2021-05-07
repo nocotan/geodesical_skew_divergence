@@ -1,7 +1,36 @@
 from typing import Optional
 import torch
+import torch.nn as nn
 
 from gs_divergence.alpha_geodesic import alpha_geodesic
+
+
+class GSDivLoss(nn.Module):
+    r"""The alpha-geodesical skew divergence loss measure
+
+    `alpha-geodesical skew divergence`_ is a useful distance measure for continuous
+    distributions and is approximation of the 'Kullback-Leibler divergence`.
+
+    This criterion expects a `target` `Tensor` of the same size as the
+    `input` `Tensor`.
+    """
+    def __init__(
+        self,
+        alpha: float = -1,
+        lmd: float = 0.5,
+        reduction: Optional[str] = 'sum') -> None:
+
+        self.alpha = alpha
+        self.lmd = lmd
+        self.reduction = reduction
+
+    def forward(
+        self,
+        input: torch.Tensor,
+        target: torch.Tensor) -> torch.Tensor:
+
+        return gs_div(input, target, self.alpha, self.lmd, self.reduction)
+
 
 
 def gs_div(
