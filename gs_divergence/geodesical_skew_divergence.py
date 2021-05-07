@@ -11,7 +11,13 @@ class GSDivLoss(nn.Module):
         alpha: float = -1,
         lmd: float = 0.5,
         reduction: Optional[str] = 'sum'):
-        r"""
+        r"""The alpha-geodesical skew divergence loss measure
+
+        `alpha-geodesical skew divergence`_ is a useful distance measure for continuous
+        distributions and is approximation of the 'Kullback-Leibler divergence`.
+
+        This criterion expects a `target` `Tensor` of the same size as the
+        `input` `Tensor`.
         """
 
         self.alpha = alpha
