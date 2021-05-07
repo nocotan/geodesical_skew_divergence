@@ -24,6 +24,14 @@ class GSDivLoss(nn.Module):
         self.lmd = lmd
         self.reduction = reduction
 
+    def forward(
+        self,
+        input: torch.Tensor,
+        target: torch.Tensor) -> torch.Tensor:
+
+        return gs_div(input, target, self.alpha, self.lmd, self.reduction)
+
+
 
 def gs_div(
     input: torch.Tensor,
