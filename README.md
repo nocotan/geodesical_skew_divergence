@@ -96,7 +96,7 @@ dif.backward()
 ```bibtex
 @Article{e23050528,
 AUTHOR = {Kimura, Masanari and Hino, Hideitsu},
-TITLE = {α-Geodesical Skew Divergence},
+TITLE = {alpha-Geodesical Skew Divergence},
 JOURNAL = {Entropy},
 VOLUME = {23},
 YEAR = {2021},
